@@ -21,7 +21,7 @@
     <button @click="addGoal">Add Goal</button>
     <p v-if="goals.length === 0">No goals have been added yet</p>
     <ul v-else="goals.length >= 1">
-      <li>Goal</li>
+      <li v-for="goal in goals">goal</li>
     </ul>
   </section>
 </body>
