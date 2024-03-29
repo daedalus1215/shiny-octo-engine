@@ -13,17 +13,12 @@
 
 <body>
   <header>
-    <h1>Vue Dynamic Styling</h1>
+    <h1>FriendList</h1>
   </header>
-  <section id="user-goals">
-    <h2>My course goals</h2>
-    <input type="text" v-model="enteredGoalValue" />
-    <button @click="addGoal">Add Goal</button>
-    <p v-if="goals.length === 0">No goals have been added yet</p>
-    <ul v-else="goals.length >= 1">
-      <li v-for="(goal, idx) in goals" @click="removeGoal(idx)" :key="goal">{{goal}}</li>
+  <section id="app">
+    <ul>
+     <friend-contact></friend-contact>
     </ul>
   </section>
 </body>
-
 </html>
