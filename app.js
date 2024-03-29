@@ -1,18 +1,18 @@
 const app = Vue.createApp({
-  data() {
-    return {
-      enteredGoalValue: '',
-      goals: []
-    }
-  },
-  methods: {
-    addGoal() {
-      this.goals.push(this.enteredGoalValue);
+    data() {
+        return {
+            detailsAreVisible: false,
+            friends: [
+                { id: 'manual', name: 'Manuel Lorenz', phone: '324234234', email: 'asdas@local.com' },
+                { id: 'julie', name: 'Julie Lorenz', phone: '3242353453', email: 'sadfa@local.com' },
+            ]
+        }
     },
-    removeGoal(idx) {
-      this.goals.splice(idx, 1);
+    methods: {
+        toggleDetails() {
+            this.detailsAreVisible = !this.detailsAreVisible;
+        }
     }
-  },
-});
+})
 
-app.mount('#user-goals');
+app.mount('#app')
