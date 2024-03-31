@@ -8,10 +8,24 @@
 
 
 <script>
+import AddResource from './AddResource.vue';
+
 export default {
+    components: {
+        AddResource
+    },
     data() {
         return {
-            selectedTab: 'stored-resources'
+            selectedTab: 'stored-resources',
+            storedResources: [
+                { id: 'official-guide', title: 'Official Guide', description: 'The official vueJS documentation', link: 'https://vuejs.org' },
+                { id: 'google', title: 'Google', description: 'Search Engine', link: 'https://google.com' },
+            ]
+        }
+    },
+    provide() {
+        return {
+            resources: this.storedResources
         }
     },
     methods: {

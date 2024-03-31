@@ -1,6 +1,9 @@
 <template>
     <ul>
-        <resource-item v-for="resource in resources" :key="resource.id" :title="resource.title"
+        <resource-item 
+        v-for="resource in resources" 
+        :key="resource.id" 
+        :title="resource.title"
             :description="resource.description" :link="resource.link" />
     </ul>
 </template>
@@ -12,7 +15,7 @@ export default {
     components: {
         ResourceItem
     },
-    props: ['resources']
+    inject: ['resources']
 }
 </script>
 
