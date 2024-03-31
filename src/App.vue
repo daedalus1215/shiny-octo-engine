@@ -1,16 +1,19 @@
 <template>
-  <ul>
-    <learning-resource v-for="resource in storedResources" :key="resource.id"></learning-resource>
-  </ul>
+  <the-header title="RememberMe"></the-header>
+  <StoredResources :resources="storedResources"/>
 </template>
 
 <script>
 import ResourceItem from './components/learning-resources/ResourceItem.vue';
+import StoredResources from './components/learning-resources/StoredResources.vue';
+import TheHeader from './components/layouts/TheHeader.vue';
 
 export default {
   components: {
-    ResourceItem
-  }
+    ResourceItem,
+    StoredResources,
+    TheHeader
+  },
   data() {
     return {
       storedResources: [
@@ -22,3 +25,14 @@ export default {
   }
 }
 </script>
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+</style>
