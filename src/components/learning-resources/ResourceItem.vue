@@ -4,7 +4,7 @@
             <div>
                 <header>
                     <h3>{{ title }}</h3>
-                    <button>Delete</button>
+                    <base-button>Delete</base-button>
                 </header>
             </div>
             <p>{{ description }}</p>
