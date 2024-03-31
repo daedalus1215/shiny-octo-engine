@@ -24,6 +24,7 @@ export default {
 
 <style scoped>
 li {
+    list-style-type: none;
     margin: auto;
     max-width: 40rem;
 }
