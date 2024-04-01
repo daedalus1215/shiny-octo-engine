@@ -1,12 +1,13 @@
 <template>
     <base-card>
-        <base-button @click="setSelectedTab('stored-resources')"
-            :mode="storedResButtonMode">
+        <base-button @click="setSelectedTab('stored-resources')" :mode="storedResButtonMode">
             Stored Resources
         </base-button>
         <base-button @click="setSelectedTab('add-resource')" :mode="addResButtonMode">Add Resource</base-button>
     </base-card>
-    <component :is="selectedTab"></component>
+    <keep-alive>
+        <component :is="selectedTab"></component>
+    </keep-alive>
 </template>
 
 
@@ -48,7 +49,7 @@ export default {
             const newResource = {
                 id: new Date().toString(),
                 title: title,
-                description:description,
+                description: description,
                 link: url
             };
             this.storedResources.unshift(newResource);
