@@ -1,9 +1,6 @@
 <template>
     <ul>
-        <resource-item 
-        v-for="resource in resources" 
-        :key="resource.id" 
-        :title="resource.title"
+        <resource-item v-for="resource in resources" :key="resource.id" :id="resource.id" :title="resource.title"
             :description="resource.description" :link="resource.link" />
     </ul>
 </template>
@@ -19,5 +16,4 @@ export default {
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
